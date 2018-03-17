@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+    <div id="action">
+      <app-header></app-header>
+      <li v-for="item in items">
+        {{ item.message }}
+      </li>
+    </div>
+  </body>
+  <script type="text/javascript">
+    Vue.component('app-header', {
+      template: '<div style="font-size:24px;">Header</div>'
+    });
+    var action = new Vue({
+      el: "#action",
+      data: {
+        items: [
+          { message: 'Foo' },
+          { message: 'Bar' }
+        ]
+        // text: "Header"
+      }
+    });
+  </script>
+</html>
