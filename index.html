@@ -3,14 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="common.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/javascript" src="common.js"></script>
+    <style type="text/css" media="screen">
+      html,body {
+        margin: 0 0;
+      }
+      ul,li{
+        list-style: none;
+        list-style-type: none;
+      }
+      #action{
+        margin-top: 50px;
+      }
+      .li-items {
+        width: 150px;
+        /* text-align: right; */
+      }
+      .li-items-name::after {
+        content: ":";
+      }
+      .li-items-progress{
+        width: 100px;
+      }
+    </style>
   </head>
   <body>
     <div id="action">
       <app-header></app-header>
-      <li v-for="item in items">
-        {{ item.message }}
+      <li class="member li-items" v-for="item in items">
+        <span class="li-items-name">{{ item.name }}</span>
+        <progress :value="item.attack"  max="100"></progress>
+        <progress :value="item.blood"  max="100"></progress>
+        <button type="button" name="button" on-click="item.action()">Attack</button>
+        <!-- <span class="li-items-progress">{{ item.progress}}</span> -->
       </li>
     </div>
   </body>
@@ -19,11 +45,20 @@
       el: "#action",
       data: {
         items: [
-          { message: 'Foo' },
-          { message: 'Bar' }
-        ]
-        // text: "Header"
+          {
+            name: 'Foo',
+            attack: 20,
+            blood: 80,
+            action: function () {
+              console.log(1);
+            }
+          },{
+            name: 'Bar',
+            attack: 30,
+            blood: 80
+        }]
       }
     });
+    console.log(action.items);
   </script>
 </html>

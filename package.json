@@ -1,0 +1,25 @@
+{
+  "name": "pve-action",
+  "version": "1.0.0",
+  "description": "pve action test",
+  "main": "common.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyrieek/Pve-Action.git"
+  },
+  "keywords": [
+    "pve"
+  ],
+  "author": "Tian Hao",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lyrieek/Pve-Action/issues"
+  },
+  "homepage": "https://github.com/lyrieek/Pve-Action#readme",
+  "dependencies": {
+    "grunt": "^1.0.2"
+  }
+}
