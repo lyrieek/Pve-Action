@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="src/common.js"></script>
+    <script type="text/javascript" src="src/app.js"></script>
     <style type="text/css" media="screen">
         html,
         body {
@@ -24,7 +25,6 @@
 
         .li-items {
             width: 150px;
-            /* text-align: right; */
         }
 
         .li-items-name::after {
@@ -49,28 +49,5 @@
         </li>
     </div>
 </body>
-<script type="text/javascript">
-    var action = new Vue({
-        el: "#action",
-        data: {
-            items: [{
-                name: 'Foo',
-                attack: 20,
-                blood: 80,
-                action: function() {
-                    console.log(1);
-                }
-            }, {
-                name: 'Bar',
-                attack: 30,
-                blood: 80,
-                action: function() {
-                    console.log(2);
-                }
-            }]
-        }
-    });
-    console.log(action.items);
-</script>
 
 </html>
